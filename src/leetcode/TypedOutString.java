@@ -39,7 +39,7 @@ public class TypedOutString {
 					
 				}
 				if(!sArr[ps].equals(tArr[pt])) {
-					retrun false;
+					return;
 				}else {
 					ps--;
 					pt--;
@@ -47,6 +47,6 @@ public class TypedOutString {
 			}
 		}
 		
-		return true;
+		return;
 	}
 }
