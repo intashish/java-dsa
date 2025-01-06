@@ -1,10 +1,39 @@
 package binary_tree;
 
+import java.util.LinkedList;
+import java.util.Queue;
+
 public class BinaryTree {
 
-	BinaryNode node;
+	BinaryNode root;
 	BinaryTree() {
-		this.node = null;
+		this.root = null;
+	}
+
+//	Note: in search binary tree we will use level order traversal
+// 	because in other stack we are using stacks and in level order we are using queue and queue is faster then stacks.
+	boolean search(BinaryNode root, int value) {
+		
+		Queue<BinaryNode> queue = new LinkedList<BinaryNode>();
+		if(root == null) return false;
+		queue.add(root);
+		
+		while(!queue.isEmpty()) {
+			
+			BinaryNode currentNode = queue.remove();
+			if(currentNode.left != null) {
+				queue.add(currentNode.left);
+			}
+			
+			if(currentNode.right != null) {
+				queue.add(currentNode.right);
+			}
+			
+			if(value == currentNode.value) {
+				return true;
+			}
+		}
+		return false;
 	}
 	
 	public void preOrder(BinaryNode root) {
@@ -28,4 +57,35 @@ public class BinaryTree {
 		postOrder(root.right);
 		System.out.print(root.value +"-->");
 	}
+	
+	void levelOrder(BinaryNode root) {
+		Queue<BinaryNode> queue = new LinkedList<BinaryNode>();
+		if(root == null) return;
+		queue.add(root);
+		
+		while(!queue.isEmpty()) {
+			
+			BinaryNode currentNode = queue.remove();
+			if(currentNode.left != null) {
+				queue.add(currentNode.left);
+			}
+			
+			if(currentNode.right != null) {
+				queue.add(currentNode.right);
+			}
+			
+			System.out.print(currentNode.value +" -> ");
+		}
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }

@@ -31,9 +31,16 @@ public class Main {
 		bt.inOrder(n1);
 		
 		System.out.println();
-		System.out.println("Post order traversal");
+		System.out.println("Level order traversal");
 		bt.postOrder(n1);
 		
+		System.out.println();
+		System.out.println("Post order traversal");
+		bt.levelOrder(n1);
+		
+		System.out.println();
+		System.out.println("Search node using level order");
+		System.out.println("search node " + bt.search(n1, 15));
 //		Tree representation of data for better understanding
 //								 1
 //						        / \
