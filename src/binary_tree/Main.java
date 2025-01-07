@@ -24,23 +24,29 @@ public class Main {
 		n3.left = n6;
 		n3.right = n7;
 		
-		System.out.println("Pre order traversal");
-		bt.preOrder(n1);
-		System.out.println();
-		System.out.println("In order traversal");
-		bt.inOrder(n1);
+//		System.out.println("Pre order traversal");
+//		bt.preOrder(n1);
+//		System.out.println();
+//		System.out.println("In order traversal");
+//		bt.inOrder(n1);
+//		
+//		System.out.println();
+//		System.out.println("Post order traversal");
+//		bt.postOrder(n1);
+//		
+//		System.out.println();
+//		System.out.println("Level order traversal");
+//		bt.levelOrder(n1);
+//		
+//		System.out.println();
+//		System.out.println("Search node using level order");
+//		System.out.println("search node " + bt.search(n1, 15));
 		
-		System.out.println();
-		System.out.println("Level order traversal");
-		bt.postOrder(n1);
-		
-		System.out.println();
-		System.out.println("Post order traversal");
+		System.out.println("Insertion of new node");
+		bt.insert(n1, 10);
 		bt.levelOrder(n1);
 		
-		System.out.println();
-		System.out.println("Search node using level order");
-		System.out.println("search node " + bt.search(n1, 15));
+		
 //		Tree representation of data for better understanding
 //								 1
 //						        / \
