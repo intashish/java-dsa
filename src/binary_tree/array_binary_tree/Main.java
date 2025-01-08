@@ -13,7 +13,7 @@ public class Main {
 		bt.insert(7);
 		bt.insert(8);
 		bt.insert(9);
-//		bt.print();
+
 		System.out.println("Pre order traversal");
 		bt.preOrder(1);
 		
@@ -24,6 +24,19 @@ public class Main {
 		System.out.println();
 		System.out.println("Post order traversal");
 		bt.postOrder(1);
+		
+		System.out.println();
+		System.out.println("Search node");
+		int index = bt.search(5);
+		System.out.println(index);
+		
+		bt.leveOrder();
+		System.out.println();
+		System.out.println("Delete node");
+		bt.delete(5);
+		bt.leveOrder();
+		
+		
 	}
 	
 

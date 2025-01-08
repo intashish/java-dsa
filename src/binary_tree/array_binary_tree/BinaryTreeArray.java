@@ -48,18 +48,44 @@ public class BinaryTreeArray {
 	}
 	
 	//left -> right -> root
-		void postOrder(int index) {
-			if(index > lastUsedIndex) return;
-			
-			postOrder(2 * index);
-			postOrder(2 * index + 1);
-			System.out.print(arr[index] + " -> ");
-			
-		}
+	void postOrder(int index) {
+		if(index > lastUsedIndex) return;
+		
+		postOrder(2 * index);
+		postOrder(2 * index + 1);
+		System.out.print(arr[index] + " -> ");
+		
+	}
 	
-	void print() {
-		for(int i = 1; i < arr.length; i++) {
-			System.out.println(arr[i]);
+	//Search node
+	int search(int value) {
+		if(lastUsedIndex == 0) {
+			return -1;
+		}
+		
+		for(int i = 1; i <= lastUsedIndex; i++ ) {
+			if(arr[i] == value) {
+				return i;
+			}
+		}
+		return -1;
+	}
+	
+	//Delete Node
+	void delete(int value) {
+		int index = search(value);
+		if(index == -1) {
+			System.out.println("node does not exit");
+			return;
+		}
+		arr[index] = arr[lastUsedIndex];
+		lastUsedIndex--;
+		System.out.println("deleted the node");
+	}
+	
+	void leveOrder() {
+		for(int i = 1; i <= lastUsedIndex; i++) {
+			System.out.print(arr[i] + " -> ");
 		}
 	}
 	
