@@ -36,32 +36,44 @@ public class LongestSubstring {
 	
 	public static void main(String[] args) {
 //		String s = "abcabcdbb";
-		String s = "";
-		if(s.length() == 0) {
-			System.out.println(0);
-			return;
-		}
-		String[] stringArray = s.split("");
-		int j = 0, i = 0, longestCount = 0;
+//		String s = "";
+//		if(s.length() == 0) {
+//			System.out.println(0);
+//			return;
+//		}
+//		String[] stringArray = s.split("");
+//		int j = 0, i = 0, longestCount = 0;
+//		
+//		
+//		Map<String, Integer> map = new HashMap<String, Integer>();
+//		
+//		while(j < stringArray.length) {
+//			if(map.containsKey(stringArray[j])) {
+//				int index = map.get(stringArray[j]);
+//				while(i <= index) {
+//					map.remove(stringArray[i]);
+//					i++;
+//				}
+//			}
+//			map.put(stringArray[j], j);
+//			int count = j - i + 1;
+//			if(count > longestCount) {
+//				longestCount = count;
+//			}
+//			j++;
+//		}
+//		System.out.println(longestCount);
 		
 		
-		Map<String, Integer> map = new HashMap<String, Integer>();
-		
-		while(j < stringArray.length) {
-			if(map.containsKey(stringArray[j])) {
-				int index = map.get(stringArray[j]);
-				while(i <= index) {
-					map.remove(stringArray[i]);
-					i++;
-				}
-			}
-			map.put(stringArray[j], j);
-			int count = j - i + 1;
-			if(count > longestCount) {
-				longestCount = count;
-			}
-			j++;
-		}
-		System.out.println(longestCount);
+//		String s = "abcabcdbb";
+//		Map<String, Integer> map = new HashMap<String, Integer>();
+//		int right = 0, left = 0;
+//		int longest = 0;
+//		
+//		for(int i = 0; i < s.length(); i++) {
+//			if(map.containsKey(s.charAt(i))) {
+//				map
+//			}
+//		}
 	}
 }
