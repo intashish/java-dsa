@@ -2,6 +2,10 @@ package calculator;
 
 public class Calculator {
 
+	void sub(int a, int b) {
+		System.out.println(a-b);
+	}
+	
 	void add(int a, int b) {
 		System.out.println(a+b);
 	}
